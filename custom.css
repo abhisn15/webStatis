@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
+}
+
+.intro {
+  width: auto;
+  background: url(assets/aset1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.elg.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<script src="https://kit.fontawesome.com/22ac4c2e03.js" crossorigin="anonymous"></script>
+	
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+
+</head>
+<body>
+  <div class="intro relative left-0 right-0 h-screen">
+		<div class="bg-cover">
+			<div class="flex antialiased mx-auto">
+				<div class="w-full text-white">
+					<div x-data="{ open: false }"
+						class=" navbar flex flex-col max-w-screen-xl px-20 mx-auto md:justify-center md:flex-row md:px-20 lg:px-20 md:pt-6">
+						<div class="flex flex-row justify-between p-4">
+							<a href="#"
+								class="text-xl font-semibold tracking-widest text-white uppercase rounded-lg text-white focus:outline-none focus:shadow-outline">LOGO</a>
+							<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+								@click="open = !open">
+								<svg fill="#fff" viewBox="0 0 20 20" class="w-6 h-6">
+									<path id="garis" x-show="!open" fill-rule="evenodd"
+										d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+										clip-rule="evenodd"></path>
+									<path id="silang" x-show="open" fill-rule="evenodd"
+										d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+										clip-rule="evenodd"></path>
+								</svg>
+							</button>
+						</div>
+						<nav id="nav-menu" :class="{'flex': open, 'hidden': !open}"
+							class="flex-col flex-grow hidden pb-4 text-center justify-between md:pb-0 md:flex md:justify-end md:flex-row md:text-center">
+							<a id="hamburger"
+								class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg bg-transparent focus: focus:text-white hover:text-slate-500 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover: focus: focus:outline-none focus:shadow-outline"
+								onclick="hidden" href="#home">Home</a>
+							<a id="hamburger"
+								class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg bg-transparent hover: focus: focus:text-white hover:text-slate-500 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover: focus: focus:outline-none focus:shadow-outline"
+								href="#about">About</a>
+							<a id="hamburger"
+								class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg bg-transparent hover: focus: focus:text-white hover:text-slate-500 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover: focus: focus:outline-none focus:shadow-outline"
+								href="#contact">Contact</a>
+							<div x-show="open" x-transition:enter="transition ease-out duration-100"
+								x-transition:enter-start="transform opacity-0 scale-95"
+								x-transition:enter-end="transform opacity-100 scale-100"
+								x-transition:leave="transition ease-in duration-75"
+								x-transition:leave-start="transform opacity-100 scale-100"
+								x-transition:leave-end="transform opacity-0 scale-95"
+								class="absolute right-0 w-full md:max-w-screen-lg md:w-screen mt-2 origin-top-right">
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+    <div class="container mx-auto">
+      <h1 class="text-white font-extrabold leading-tight text-5xl mt-32">Informasi Mengenai<br>Jenis-Jenis Sampah dan<br>Apa itu Reduce,<br> Reuse, Recycle.</h1>
+    </div>
+	</div>
+
+	<div class="section h-screen flex items-center">
+		<div class="container mx-auto">
+			<div class="flex justify-between items-center gap-10">
+				<div class="w-1/2">
+					<div class="title1">
+						<h1 class="font-bold text-4xl leading-tight">Apa itu Sampah?</h1>
+						<p class="font-regular text-xl leading-snug mt-6">Seperti yang kalian ketahui, bahwasannya sampah <br> merupakan material sisa
+						hasil aktivitas yang dibuang sebagai <br> hasil dari proses produksi, baik itu dalam industri maupun <br>rumah tangga dan
+						sesuatu yang tidak diinginkan oleh manusia<br> setelah proses dan penggunaannya berakhir</p>
+					</div>
+					<div class="title2 mt-20">
+						<h1 class="font-bold text-4xl leading-tight">Jenis-Jenis Sampah?</h1>
+						<p class="font-regular text-xl leading-snug mt-6">Seperti yang telah disebutkan, bahwa sampah bisa <br> berwujud padat, cair, hingga gas. Sampah juga bisa berasal dari limbah <br> rumah tangga, hasil industri,rumah sakit, pertanian, peternakan, <br> pasar, perkebunan, dan berbagai tempat lainnya. Jenis sampah <br>dibagi menjadi 3 jenis, antara lain sampah organik, non-organik, sampah Berbahan Berbahaya dan Beracun (B3).</p>
+					</div>
+				</div>
+				<div class="w-1/2 flex justify-center">
+					<img src="./assets/aset2.svg" alt="" class="h-auto w-2/3">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section flex items-center ">
+		<div class="container mx-auto">
+			<div class="mx-40">
+				<h1 class="font-bold text-3xl leading-tight text-center">Sampah Organik</h1>
+				<p class="font-regular text-2xl leading-snug mt-6 ">Sampah organik adalah sisa-sisa organisme hidup baik manusia, hewan, ataupun tumbuhan. Sampah organik dapat mengalami dekomposisi (pelapukan) dan terurai. Sampah organik disebut juga sebagai sampah basah (garbage), karena sebagian besar cukup banyak mengandung air. Berdasarkan jenisnya, sampah organik dibagi menjadi 2 jenis, yaitu sampah organik basah dan sampah organik kering.</p>
+			</div>
+				
+			<div class="flex justify-around gap-20 my-10 mx-20">
+				<div class="flex flex-col gap-10 w-1/2">
+					<img src="./assets/aset3.svg" alt="" class="w-full h-60">
+					<h1 class="font-bold text-3xl leading-tight">Sampah Organik Basah</h1>
+					<p class="font-regular text-2xl leading-snug">Sampah organik basah adalah sampah organik yang sebagian besar. mengandung air. Inilah yang menjadi alasan kalau sampah organik bisa menimbulkan bau yang tidak sedap, karena memiliki banyak kandungan air yang menyebabkan sampah jenis ini cepat untuk membusuk seperti buah yang busuk, sisa sayur-sayuran, kotoran hewan, dsb.</p>
+				</div>
+				<div class="flex flex-col gap-10 w-1/2">
+					<img src="./assets/aset4.svg" alt="" class="w-full h-60">
+					<h1 class="font-bold text-3xl leading-tight">Sampah Organik Kering</h1>
+					<p class="font-regular text-2xl leading-snug">Sampah organik kering termasuk sampah organik yang kadar airnya sedikit, seperti ranting pohon, kayu, daun-daunan kering. Dampak yang disebabkan oleh sampah organik yaitu sampah organik menghasilkan cairan leachate yang berbahaya. Cairan ini bisa mengurangi kualitas tanah dan air di sekitar sampah. Selain itu, tumpukan sampah organik juga menghasilkan gas metana, apabila disimpan dalam kondisi tertutup, kekurangan sinar matahari dan oksigen, dapat meledak.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section flex items-center my-20">
+		<div class="container mx-auto">
+			<div class="mx-40 flex flex-col gap-10">
+				<div class="flex justify-center">
+					<img src="./assets/aset5.svg" alt="" class="w-3/4 h-full">
+				</div>
+				<h1 class="font-bold text-3xl leading-tight text-center">Sampah Anorganik</h1>
+				<p class="font-regular text-2xl leading-snug mt-6 ">Sampah anorganik adalah jenis sampah yang terdiri dari bahan-bahan non-organik atau tidak dapat diuraikan oleh organisme menjadi bahan organik. Beberapa contoh sampah anorganik adalah sebagai berikut:
+					<br><br>
+1. Logam: termasuk besi, aluminium, tembaga, timah, seng, dan lain-lain.
+<br>
+2. Plastik: termasuk botol plastik, kantong plastik, tutup botol, dan lain-lain.
+<br>
+3. Kaca: termasuk botol kaca, pecahan kaca, dan lain-lain.
+<br>
+4. Karet: termasuk ban mobil, selang karet, dan lain-lain.
+<br>
+5. Kertas laminasi: termasuk kemasan makanan, kemasan minuman, dan lain-lain.
+<br>
+6. Bahan kimia: termasuk baterai, lampu neon, obat-obatan, dan lain-lain.
+<br>
+7. Elektronik: termasuk komputer, ponsel, televisi, dan lain-lain.
+<br>
+8. Batu bata dan beton: termasuk limbah bangunan dan konstruksi.
+<br><br>
+Sampah anorganik sulit diuraikan dan tidak dapat diurai oleh proses alami seperti dekomposisi organik. Oleh karena itu, sampah anorganik seringkali menyebabkan masalah lingkungan yang serius jika tidak dikelola dengan benar.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="section flex items-center my-20">
+		<div class="container mx-auto">
+			<div class="mx-40 flex flex-col gap-10">
+				<div class="flex justify-center">
+					<img src="./assets/aset5.svg" alt="" class="w-3/4 h-full">
+				</div>
+				<h1 class="font-bold text-3xl leading-tight text-center">Sampah B3 (Bahan Berbahaya)</h1>
+				<p class="font-regular text-2xl leading-snug mt-6 ">Sampah B3 adalah jenis sampah yang mengandung bahan-bahan berbahaya dan beracun. B3 sendiri adalah singkatan dari Bahan Berbahaya dan Beracun. Jenis sampah B3 ini sangat berbahaya bagi lingkungan dan kesehatan manusia jika tidak dikelola dengan baik. Contoh sampah B3 antara lain limbah industri, limbah rumah sakit, limbah pestisida, limbah cat, limbah baterai, dan sebagainya.
+<br><br>
+Sampah B3 dapat menyebabkan kerusakan lingkungan dan kesehatan manusia jika tidak dikelola dengan baik. Oleh karena itu, pengelolaan sampah B3 harus dilakukan dengan cara yang tepat dan aman. Pengelolaan sampah B3 meliputi pengumpulan, pemisahan, penyimpanan, pengangkutan, pengolahan, dan pembuangan akhir. Hal ini dilakukan untuk meminimalkan risiko pencemaran lingkungan dan kesehatan manusia akibat sampah B3.
+					<br><br>
+					1. Baterai bekas: mengandung timbal, kadmium, dan merkuri yang berbahaya bagi lingkungan dan kesehatan manusia.
+					<br>
+					2. Cat dan pelarut: mengandung senyawa organik volatil yang dapat menyebabkan iritasi pada saluran pernapasan, kulit, dan mata.
+					<br>
+					3. Limbah medis: termasuk jarum suntik, bahan kimia, dan bahan berbahaya lain yang dihasilkan dari rumah sakit, laboratorium, dan institusi medis lainnya.
+					<br>
+					4. Pestisida: mengandung bahan kimia yang digunakan untuk membunuh hama dan serangga yang dapat menyebabkan keracunan pada manusia dan hewan.
+					<br>
+					5. Limbah elektronik: termasuk komputer, ponsel, televisi, dan bahan elektronik lainnya yang mengandung berbagai bahan kimia berbahaya seperti timah, arsenik, dan kadmium.
+					<br>
+					6. Limbah minyak: termasuk minyak bekas dan limbah dari pengolahan minyak bumi yang mengandung senyawa beracun seperti benzena dan fenol.
+					<br><br>
+				Pengelolaan sampah B3 harus dilakukan dengan hati-hati dan sesuai dengan peraturan yang berlaku, termasuk dalam hal transportasi, penyimpanan, pengolahan, dan pembuangan akhir, agar tidak menimbulkan dampak buruk pada lingkungan dan kesehatan manusia.
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section flex items-center my-20">
+		<div class="container mx-auto">
+			<div class="mx-40 flex flex-col gap-10">
+				<div class="flex justify-center">
+					<img src="./assets/aset5.svg" alt="" class="w-3/4 h-full">
+				</div>
+				<h1 class="font-bold text-3xl leading-tight text-center">Reduce, Reuse, Recycle</h1>
+				<p class="font-regular text-2xl leading-snug mt-6">Reduce, reuse, dan recycle adalah tiga konsep penting dalam mengurangi jumlah sampah yang dihasilkan dan mengelola sampah dengan lebih efektif. "Reduce" berarti mengurangi penggunaan barang atau bahan tertentu untuk menghindari terjadinya limbah. "Reuse" berarti menggunakan kembali barang atau bahan yang masih dapat digunakan sebelum dibuang sebagai sampah. "Recycle" berarti memproses atau mengubah bahan bekas menjadi bahan baru yang dapat digunakan kembali. Konsep reduce, reuse, dan recycle bertujuan untuk mengurangi dampak negatif sampah terhadap lingkungan, menghemat sumber daya alam, dan meminimalkan dampak perubahan iklim. <br><br>
+
+					Cara reduce, reuse, dan recycle dapat dilakukan dengan berbagai cara, antara lain:
+
+					<br><br>
+					<span class="font-bold"> 1. Reduce (Mengurangi): </span>
+						
+						<br>
+						<span class="flex items-start gap-4 mt-2">
+							<i class="fas fa-chevron-right w-11 mt-2"></i>Membawa tas belanja sendiri ketika pergi ke pasar atau supermarket untuk mengurangi penggunaan plastik sekali pakai.
+						</span>
+						<span class="flex items-center gap-4">
+							<i class="fas fa-chevron-right w-8"></i>Menggunakan botol minum kembali untuk mengurangi pembelian botol plastik sekali pakai<br>
+						</span>
+						<span class="flex items-center gap-4">
+							<i class="fas fa-chevron-right w-8"></i>  Menggunakan lampu LED atau hemat energi untuk mengurangi penggunaan listrik.
+						</span>
+
+						<br>
+					<span class="font-bold"> 1. Reuse (Menggunakan Kembali): </span>
+						<br>
+						<span class="flex items-start gap-4 mt-2">
+							<i class="fas fa-chevron-right w-8 mt-2"></i>Menggunakan kembali kantong plastik untuk membuang sampah organik atau limbah basah
+						</span>
+						<span class="flex items-center gap-4">
+							<i class="fas fa-chevron-right w-8"></i>Menggunakan kembali kertas bekas sebagai catatan atau memo.
+						</span>
+						<span class="flex items-center gap-4">
+							<i class="fas fa-chevron-right w-8"></i>Menggunakan kembali botol bekas sebagai wadah penyimpanan atau bahan hiasan.
+						</span>
+
+					<br><span class="font-bold"> 3. Recycle (Mendaur Ulang): </span>
+						<span class="flex items-start gap-4 mt-2">
+							<i class="fas fa-chevron-right w-8 mt-2"></i>Memilah sampah yang bisa didaur ulang seperti botol plastik, kertas, logam, dan kaca.
+						</span>
+						<span class="flex items-center gap-4">
+							<i class="fas fa-chevron-right w-8"></i>Membuang sampah yang dapat didaur ulang pada tempat yang sudah disediakan seperti bank sampah atau wadah daur ulang.
+						</span>
+						<span class="flex items-center gap-4">
+							<i class="fas fa-chevron-right w-8"></i>Menggunakan produk yang terbuat dari bahan daur ulang seperti kertas daur ulang atau tas belanja dari bahan daur ulang.
+						</span>
+					
+					<br><br>
+				Pengelolaan sampah B3 harus dilakukan dengan hati-hati dan sesuai dengan peraturan yang berlaku, termasuk dalam hal transportasi, penyimpanan, pengolahan, dan pembuangan akhir, agar tidak menimbulkan dampak buruk pada lingkungan dan kesehatan manusia.
+			</div>
+		</div>
+	</div>
+</body>
+</html>
